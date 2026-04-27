@@ -1,0 +1,29 @@
+<head>
+<meta property="og:title" content="Emoji Spill">
+<meta property="og:description" content="A bunch of emojis">
+<meta property="og:image" content="https://cdn.discordapp.com/attachments/1493332493334479038/1498402450636279869/Screenshot_2026-04-27_at_2.15.29_PM.png?ex=69f10787&is=69efb607&hm=f217f756a7b1a73098b2e3427899d0e763c436ad2cccf799a95c9efd47b61dc9&">
+</head>
+<body>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library/build/nn.min.js"></script>
+<script>
+  /* global nn */
+
+  function draw () {
+    let x = nn.random(nn.width)
+    let y = nn.random(nn.height)
+    nn.create('a-box')
+      .content('👋')
+      .rotate(nn.random(360))
+      .position(x, y)
+      .hueRotate(nn.random(355))
+      .addTo('body')
+      .scale(15)
+  }
+  
+nn.times(500, draw)
+  
+</script>
